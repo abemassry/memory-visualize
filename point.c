@@ -3,18 +3,18 @@
 
 int main(int argc, char *argv[])
 {
-  int arr[10];
-  arr[1] = 10;
-  arr[2] = 20;
-  arr[5] = 100;
-  int i;
-  for(i = 0; i <= 5; i++) {
-    printf("|----------|----------|----------\n");
-    printf("|          |          |          \n");
-    printf("| arr[%d]   |  Value   |  %d      \n", i, arr[i]);
-    printf("|&arr[%d]   |  Address |  %p      \n", i, &arr[i]);
-    printf("|          |          |\n");
-  }
+  int x = 1;
+  int *p = &x;
+  printf("|----------|----------\n");
+  printf("|          |          \n");
+  printf("| Value x  |  %d      \n", x);
+  printf("| Address  |  %p      \n", &x);
+  printf("|          |\n");
+  printf("|----------|----------\n");
+  printf("|          |          \n");
+  printf("|  Value *p|  %d      \n", *p);
+  printf("|  Address |  %p      \n", p);
+  printf("|          |\n");
 
   return 0;
 }
